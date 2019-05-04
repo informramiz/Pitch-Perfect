@@ -19,15 +19,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oCG-wx-bf2">
-                                <rect key="frame" x="182.5" y="433" width="49" height="30"/>
+                                <rect key="frame" x="182.5" y="438" width="49" height="30"/>
                                 <color key="backgroundColor" red="0.11042609936188585" green="1" blue="0.10759208741982396" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Record"/>
+                                <connections>
+                                    <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jAC-YG-ihH"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="oCG-wx-bf2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="57G-8b-ebY"/>
-                            <constraint firstItem="oCG-wx-bf2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6F4-G5-64S"/>
+                            <constraint firstItem="oCG-wx-bf2" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Eyh-PY-PjY"/>
+                            <constraint firstItem="oCG-wx-bf2" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="z6q-VG-Moy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
