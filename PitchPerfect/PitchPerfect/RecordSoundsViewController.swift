@@ -41,6 +41,7 @@ class RecordSoundsViewController: UIViewController {
     
     @IBAction func stopRecording(_ sender: Any) {
         recordingLabel.text = "Recording stopped"
+        stopAudioRecording()
         updateRecordingState(false)
     }
     
@@ -49,6 +50,7 @@ class RecordSoundsViewController: UIViewController {
         let recordingName = "recordedVoice.wav"
         let pathArray = [directoryPath, recordingName]
         let filePath = URL(string: pathArray.joined(separator: "/"))
+        print(filePath!)
         
         //get shared instance AV session
         let avAudioSession = AVAudioSession.sharedInstance()
@@ -59,6 +61,12 @@ class RecordSoundsViewController: UIViewController {
         audioRecorder.isMeteringEnabled = true
         audioRecorder.prepareToRecord()
         audioRecorder.record()
+    }
+    
+    private func stopAudioRecording() {
+        audioRecorder.stop()
+        let avAudioSession = AVAudioSession.sharedInstance()
+        try! avAudioSession.setActive(false)
     }
 }
 
