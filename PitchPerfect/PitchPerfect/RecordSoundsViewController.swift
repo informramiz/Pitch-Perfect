@@ -43,6 +43,8 @@ class RecordSoundsViewController: UIViewController {
         recordingLabel.text = "Recording stopped"
         stopAudioRecording()
         updateRecordingState(false)
+        
+        performSegue(withIdentifier: "stopRecording", sender: self)
     }
     
     private func recordAudio() {
