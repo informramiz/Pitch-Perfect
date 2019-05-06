@@ -85,7 +85,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
             let recordedSoundUrl = sender as! URL
             playSoundsViewController.recordedAudioUrl = recordedSoundUrl
         default:
-            print("Uknow segue")
+            print("Uknown segue")
         }
     }
 }
